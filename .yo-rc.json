@@ -1,0 +1,38 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.boa.api"
+    },
+    "jhipsterVersion": "6.9.1",
+    "applicationType": "monolith",
+    "baseName": "apiAssetFinance",
+    "packageName": "com.boa.api",
+    "packageFolder": "com/boa/api",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "OWQ0ZGJiZmUyMzVlMGJjZTZhYzJlMmI4YWU2MWFjNWI5ZTg0MjJjNzIwMmIyN2M4MTk2YTYxYjBiMTM4OGNmZjE3OTdjNDJlZTkyMDE2ZjQ2NjEwZWM3MTAxYzBlN2Q3MTRjY2EyNzVkMWI3ZmViYzkwMDBhMTZmMTExMGNmNDE=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "skipClient": true,
+    "creationTimestamp": 1604416897389,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}
