@@ -106,15 +106,14 @@ public class ApiService {
                 obj = new JSONObject(result);
                 //obj = obj.getJSONObject("InfoTransaction");
                 genericResp.setData(map);
-                //TODO a enlever lorsqu'on aura le format de reponse
-                genericResp.setCode(ICodeDescResponse.SUCCES_CODE);
+                /*genericResp.setCode(ICodeDescResponse.SUCCES_CODE);
                 genericResp.setDescription(ICodeDescResponse.SUCCES_DESCRIPTION);
                 genericResp.setDateResponse(Instant.now());
                 tracking = createTracking(tracking, ICodeDescResponse.SUCCES_CODE, request.getRequestURI(),
-                            genericResp.toString(), assetRequest.toString());
+                            genericResp.toString(), assetRequest.toString());*/
                 //fin todo
 
-                /*if (obj.toString() != null && !obj.isNull("InfoOperation")) {
+                if (obj.toString() != null && !obj.isNull("rcode") && obj.get("rcode").equals("0100")) {
                     genericResp.setCode(ICodeDescResponse.SUCCES_CODE);
                     genericResp.setDescription(ICodeDescResponse.SUCCES_DESCRIPTION);
                     genericResp.setDateResponse(Instant.now());
@@ -126,7 +125,7 @@ public class ApiService {
                     genericResp.setDescription(ICodeDescResponse.ECHEC_DESCRIPTION);
                     tracking = createTracking(tracking, ICodeDescResponse.ECHEC_CODE, request.getRequestURI(),
                             genericResp.toString(), assetRequest.toString());
-                }*/
+                }
             } else {
                 br = new BufferedReader(new InputStreamReader(conn.getErrorStream()));
                 String ligne = br.readLine();
