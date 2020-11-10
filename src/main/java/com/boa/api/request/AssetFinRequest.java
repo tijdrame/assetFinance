@@ -6,7 +6,7 @@ public class AssetFinRequest {
     private Double prixHt, prixTtc, txAp, mntAp, mntFin, tauxNominal, teg, fraisDossier, fraisAss, typeFraisAss, pavi;
     private String datePremEch, dateDerEch, dateEffet, quantieme, uniteGrace, idTitre, cpteBq, chargeClt, ris, dosCom, echeance, vr;
     private String idApporteur, etatInst, etatEng, etatProd, flagCharge, garantie, nooper;
-    private String dateTrait, versement, typeDossier;//46
+    private String dateTrait, versement, typeDossier, action;//47
 
     public AssetFinRequest() {
     }
@@ -658,6 +658,14 @@ public class AssetFinRequest {
         return this;
     }
 
+    public String getAction() {
+        return this.action;
+    }
+
+    public void setAction(String action) {
+        this.action = action;
+    }
+
     @Override
     public String toString() {
         return "{" +
@@ -707,6 +715,8 @@ public class AssetFinRequest {
             ", dateTrait='" + getDateTrait() + "'" +
             ", versement='" + getVersement() + "'" +
             ", typeDossier='" + getTypeDossier() + "'" +
+            ", action='" + getAction() + "'" +
+            ", cptBq='" + getCpteBq() + "'" +
             "}";
     }
 }

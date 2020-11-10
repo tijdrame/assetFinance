@@ -4,6 +4,7 @@ import com.boa.api.config.ApplicationProperties;
 
 import io.github.jhipster.config.DefaultProfileUtil;
 import io.github.jhipster.config.JHipsterConstants;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -22,6 +23,7 @@ import java.util.Collection;
 
 @SpringBootApplication
 @EnableConfigurationProperties({LiquibaseProperties.class, ApplicationProperties.class})
+@EnableSwagger2
 public class ApiAssetFinanceApp {
 
     private static final Logger log = LoggerFactory.getLogger(ApiAssetFinanceApp.class);

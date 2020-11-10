@@ -57,11 +57,9 @@ public class ApiService {
             return genericResp;
         }
         try {
-            String jsonStr = new JSONObject().put("pavi", assetRequest.getPavi())
-                    .put("numero_dossier", assetRequest.getNumeroDossier())
-                    .put("freq_ap", assetRequest.getFreqAp())
-                    .put("tx_ap", assetRequest.getTxAp())
-                    .put("charge_clt", assetRequest.getChargeClt())
+            String jsonStr = new JSONObject().put("pavi", assetRequest.getPavi()).put("action", assetRequest.getAction())
+                    .put("numero_dossier", assetRequest.getNumeroDossier()).put("freq_ap", assetRequest.getFreqAp())
+                    .put("tx_ap", assetRequest.getTxAp()).put("charge_clt", assetRequest.getChargeClt())
                     .put("prix_ttc", assetRequest.getPrixTtc())
                     .put("type_pavi", assetRequest.getTypePavi()).put("code_mrk", assetRequest.getCodeMrk())
                     .put("mnt_ap", assetRequest.getMntAp()).put("echeance", assetRequest.getEcheance())
@@ -82,7 +80,7 @@ public class ApiService {
                     .put("date_der_ech", assetRequest.getDateDerEch()).put("vr", assetRequest.getVr())
                     .put("ris", assetRequest.getRis()).put("code_mdl", assetRequest.getCodeMdl())
                     .put("dos_com", assetRequest.getDosCom()).put("etat_inst", assetRequest.getEtatInst())
-                    .put("date_effet", assetRequest.getDateEffet())//.put("garantie", assetRequest.getGarantie())
+                    .put("date_effet", assetRequest.getDateEffet()).put("cpte_bq", assetRequest.getCpteBq())
                     .toString();
 
             log.info("request assetFin [{}]", jsonStr);
@@ -101,9 +99,10 @@ public class ApiService {
                 // result = IOUtils.toString(conn.getInputStream(), "UTF-8");
                 log.info("releveCompte result ===== [{}]", result);
                 obj = new JSONObject(result);
+                obj = obj.getJSONObject("data");
                 ObjectMapper mapper = new ObjectMapper();
                 Map<String, Object> map = mapper.readValue(result, Map.class);
-                obj = new JSONObject(result);
+                //obj = new JSONObject(result);
                 //obj = obj.getJSONObject("InfoTransaction");
                 genericResp.setData(map);
                 /*genericResp.setCode(ICodeDescResponse.SUCCES_CODE);
