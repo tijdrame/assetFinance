@@ -81,6 +81,9 @@ public class ApiService {
                     .put("ris", assetRequest.getRis()).put("code_mdl", assetRequest.getCodeMdl())
                     .put("dos_com", assetRequest.getDosCom()).put("etat_inst", assetRequest.getEtatInst())
                     .put("date_effet", assetRequest.getDateEffet()).put("cpte_bq", assetRequest.getCpteBq())
+
+                    .put("mnt_com_conc", assetRequest.getMontantCommissionConcerne()).put("periode_ass", assetRequest.getPeriodeAss())
+                    .put("mnt_com_vend", assetRequest.getMontantCommissionVendeur())
                     .toString();
 
             log.info("request assetFin [{}]", jsonStr);

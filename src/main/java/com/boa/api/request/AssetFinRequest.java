@@ -8,10 +8,14 @@ public class AssetFinRequest {
     private String idApporteur, etatInst, etatEng, etatProd, flagCharge, garantie, nooper;
     private String dateTrait, versement, typeDossier, action;//47
 
+    private Double montantCommissionConcerne, montantCommissionVendeur;
+    private String periodeAss;
+
+
     public AssetFinRequest() {
     }
 
-    public AssetFinRequest(String freqAp, String numeroDossier, String idClient, String codeCss, String codeMrk, String codeMdl, String numWw, String numChassis, String numImmat, Integer grace, Integer duree, Integer typeFraisDossier, Integer typePavi, Double prixHt, Double prixTtc, Double txAp, Double mntAp, Double mntFin, Double tauxNominal, Double teg, Double fraisDossier, Double fraisAss, Double typeFraisAss, Double pavi, String datePremEch, String dateDerEch, String dateEffet, String quantieme, String uniteGrace, String idTitre, String cpteBq, String chargeClt, String ris, String dosCom, String echeance, String vr, String idApporteur, String etatInst, String etatEng, String etatProd, String flagCharge, String garantie, String nooper, String dateTrait, String versement, String typeDossier) {
+    public AssetFinRequest(String freqAp, String numeroDossier, String idClient, String codeCss, String codeMrk, String codeMdl, String numWw, String numChassis, String numImmat, Integer grace, Integer duree, Integer typeFraisDossier, Integer typePavi, Double prixHt, Double prixTtc, Double txAp, Double mntAp, Double mntFin, Double tauxNominal, Double teg, Double fraisDossier, Double fraisAss, Double typeFraisAss, Double pavi, String datePremEch, String dateDerEch, String dateEffet, String quantieme, String uniteGrace, String idTitre, String cpteBq, String chargeClt, String ris, String dosCom, String echeance, String vr, String idApporteur, String etatInst, String etatEng, String etatProd, String flagCharge, String garantie, String nooper, String dateTrait, String versement, String typeDossier, String action, Double montantCommissionConcerne, Double montantCommissionVendeur, String periodeAss) {
         this.freqAp = freqAp;
         this.numeroDossier = numeroDossier;
         this.idClient = idClient;
@@ -58,6 +62,10 @@ public class AssetFinRequest {
         this.dateTrait = dateTrait;
         this.versement = versement;
         this.typeDossier = typeDossier;
+        this.action = action;
+        this.montantCommissionConcerne = montantCommissionConcerne;
+        this.montantCommissionVendeur = montantCommissionVendeur;
+        this.periodeAss = periodeAss;
     }
 
     public String getFreqAp() {
@@ -428,242 +436,286 @@ public class AssetFinRequest {
         this.typeDossier = typeDossier;
     }
 
-    public AssetFinRequest freqAp(String freqAp) {
-        this.freqAp = freqAp;
-        return this;
-    }
-
-    public AssetFinRequest numeroDossier(String numeroDossier) {
-        this.numeroDossier = numeroDossier;
-        return this;
-    }
-
-    public AssetFinRequest idClient(String idClient) {
-        this.idClient = idClient;
-        return this;
-    }
-
-    public AssetFinRequest codeCss(String codeCss) {
-        this.codeCss = codeCss;
-        return this;
-    }
-
-    public AssetFinRequest codeMrk(String codeMrk) {
-        this.codeMrk = codeMrk;
-        return this;
-    }
-
-    public AssetFinRequest codeMdl(String codeMdl) {
-        this.codeMdl = codeMdl;
-        return this;
-    }
-
-    public AssetFinRequest numWw(String numWw) {
-        this.numWw = numWw;
-        return this;
-    }
-
-    public AssetFinRequest numChassis(String numChassis) {
-        this.numChassis = numChassis;
-        return this;
-    }
-
-    public AssetFinRequest numImmat(String numImmat) {
-        this.numImmat = numImmat;
-        return this;
-    }
-
-    public AssetFinRequest grace(Integer grace) {
-        this.grace = grace;
-        return this;
-    }
-
-    public AssetFinRequest duree(Integer duree) {
-        this.duree = duree;
-        return this;
-    }
-
-    public AssetFinRequest typeFraisDossier(Integer typeFraisDossier) {
-        this.typeFraisDossier = typeFraisDossier;
-        return this;
-    }
-
-    public AssetFinRequest typePavi(Integer typePavi) {
-        this.typePavi = typePavi;
-        return this;
-    }
-
-    public AssetFinRequest prixHt(Double prixHt) {
-        this.prixHt = prixHt;
-        return this;
-    }
-
-    public AssetFinRequest prixTtc(Double prixTtc) {
-        this.prixTtc = prixTtc;
-        return this;
-    }
-
-    public AssetFinRequest txAp(Double txAp) {
-        this.txAp = txAp;
-        return this;
-    }
-
-    public AssetFinRequest mntAp(Double mntAp) {
-        this.mntAp = mntAp;
-        return this;
-    }
-
-    public AssetFinRequest mntFin(Double mntFin) {
-        this.mntFin = mntFin;
-        return this;
-    }
-
-    public AssetFinRequest tauxNominal(Double tauxNominal) {
-        this.tauxNominal = tauxNominal;
-        return this;
-    }
-
-    public AssetFinRequest teg(Double teg) {
-        this.teg = teg;
-        return this;
-    }
-
-    public AssetFinRequest fraisDossier(Double fraisDossier) {
-        this.fraisDossier = fraisDossier;
-        return this;
-    }
-
-    public AssetFinRequest fraisAss(Double fraisAss) {
-        this.fraisAss = fraisAss;
-        return this;
-    }
-
-    public AssetFinRequest typeFraisAss(Double typeFraisAss) {
-        this.typeFraisAss = typeFraisAss;
-        return this;
-    }
-
-    public AssetFinRequest pavi(Double pavi) {
-        this.pavi = pavi;
-        return this;
-    }
-
-    public AssetFinRequest datePremEch(String datePremEch) {
-        this.datePremEch = datePremEch;
-        return this;
-    }
-
-    public AssetFinRequest dateDerEch(String dateDerEch) {
-        this.dateDerEch = dateDerEch;
-        return this;
-    }
-
-    public AssetFinRequest dateEffet(String dateEffet) {
-        this.dateEffet = dateEffet;
-        return this;
-    }
-
-    public AssetFinRequest quantieme(String quantieme) {
-        this.quantieme = quantieme;
-        return this;
-    }
-
-    public AssetFinRequest uniteGrace(String uniteGrace) {
-        this.uniteGrace = uniteGrace;
-        return this;
-    }
-
-    public AssetFinRequest idTitre(String idTitre) {
-        this.idTitre = idTitre;
-        return this;
-    }
-
-    public AssetFinRequest cpteBq(String cpteBq) {
-        this.cpteBq = cpteBq;
-        return this;
-    }
-
-    public AssetFinRequest chargeClt(String chargeClt) {
-        this.chargeClt = chargeClt;
-        return this;
-    }
-
-    public AssetFinRequest ris(String ris) {
-        this.ris = ris;
-        return this;
-    }
-
-    public AssetFinRequest dosCom(String dosCom) {
-        this.dosCom = dosCom;
-        return this;
-    }
-
-    public AssetFinRequest echeance(String echeance) {
-        this.echeance = echeance;
-        return this;
-    }
-
-    public AssetFinRequest vr(String vr) {
-        this.vr = vr;
-        return this;
-    }
-
-    public AssetFinRequest idApporteur(String idApporteur) {
-        this.idApporteur = idApporteur;
-        return this;
-    }
-
-    public AssetFinRequest etatInst(String etatInst) {
-        this.etatInst = etatInst;
-        return this;
-    }
-
-    public AssetFinRequest etatEng(String etatEng) {
-        this.etatEng = etatEng;
-        return this;
-    }
-
-    public AssetFinRequest etatProd(String etatProd) {
-        this.etatProd = etatProd;
-        return this;
-    }
-
-    public AssetFinRequest flagCharge(String flagCharge) {
-        this.flagCharge = flagCharge;
-        return this;
-    }
-
-    public AssetFinRequest garantie(String garantie) {
-        this.garantie = garantie;
-        return this;
-    }
-
-    public AssetFinRequest nooper(String nooper) {
-        this.nooper = nooper;
-        return this;
-    }
-
-    public AssetFinRequest dateTrait(String dateTrait) {
-        this.dateTrait = dateTrait;
-        return this;
-    }
-
-    public AssetFinRequest versement(String versement) {
-        this.versement = versement;
-        return this;
-    }
-
-    public AssetFinRequest typeDossier(String typeDossier) {
-        this.typeDossier = typeDossier;
-        return this;
-    }
-
     public String getAction() {
         return this.action;
     }
 
     public void setAction(String action) {
         this.action = action;
+    }
+
+    public Double getMontantCommissionConcerne() {
+        return this.montantCommissionConcerne;
+    }
+
+    public void setMontantCommissionConcerne(Double montantCommissionConcerne) {
+        this.montantCommissionConcerne = montantCommissionConcerne;
+    }
+
+    public Double getMontantCommissionVendeur() {
+        return this.montantCommissionVendeur;
+    }
+
+    public void setMontantCommissionVendeur(Double montantCommissionVendeur) {
+        this.montantCommissionVendeur = montantCommissionVendeur;
+    }
+
+    public String getPeriodeAss() {
+        return this.periodeAss;
+    }
+
+    public void setPeriodeAss(String periodeAss) {
+        this.periodeAss = periodeAss;
+    }
+
+    public AssetFinRequest freqAp(String freqAp) {
+        setFreqAp(freqAp);
+        return this;
+    }
+
+    public AssetFinRequest numeroDossier(String numeroDossier) {
+        setNumeroDossier(numeroDossier);
+        return this;
+    }
+
+    public AssetFinRequest idClient(String idClient) {
+        setIdClient(idClient);
+        return this;
+    }
+
+    public AssetFinRequest codeCss(String codeCss) {
+        setCodeCss(codeCss);
+        return this;
+    }
+
+    public AssetFinRequest codeMrk(String codeMrk) {
+        setCodeMrk(codeMrk);
+        return this;
+    }
+
+    public AssetFinRequest codeMdl(String codeMdl) {
+        setCodeMdl(codeMdl);
+        return this;
+    }
+
+    public AssetFinRequest numWw(String numWw) {
+        setNumWw(numWw);
+        return this;
+    }
+
+    public AssetFinRequest numChassis(String numChassis) {
+        setNumChassis(numChassis);
+        return this;
+    }
+
+    public AssetFinRequest numImmat(String numImmat) {
+        setNumImmat(numImmat);
+        return this;
+    }
+
+    public AssetFinRequest grace(Integer grace) {
+        setGrace(grace);
+        return this;
+    }
+
+    public AssetFinRequest duree(Integer duree) {
+        setDuree(duree);
+        return this;
+    }
+
+    public AssetFinRequest typeFraisDossier(Integer typeFraisDossier) {
+        setTypeFraisDossier(typeFraisDossier);
+        return this;
+    }
+
+    public AssetFinRequest typePavi(Integer typePavi) {
+        setTypePavi(typePavi);
+        return this;
+    }
+
+    public AssetFinRequest prixHt(Double prixHt) {
+        setPrixHt(prixHt);
+        return this;
+    }
+
+    public AssetFinRequest prixTtc(Double prixTtc) {
+        setPrixTtc(prixTtc);
+        return this;
+    }
+
+    public AssetFinRequest txAp(Double txAp) {
+        setTxAp(txAp);
+        return this;
+    }
+
+    public AssetFinRequest mntAp(Double mntAp) {
+        setMntAp(mntAp);
+        return this;
+    }
+
+    public AssetFinRequest mntFin(Double mntFin) {
+        setMntFin(mntFin);
+        return this;
+    }
+
+    public AssetFinRequest tauxNominal(Double tauxNominal) {
+        setTauxNominal(tauxNominal);
+        return this;
+    }
+
+    public AssetFinRequest teg(Double teg) {
+        setTeg(teg);
+        return this;
+    }
+
+    public AssetFinRequest fraisDossier(Double fraisDossier) {
+        setFraisDossier(fraisDossier);
+        return this;
+    }
+
+    public AssetFinRequest fraisAss(Double fraisAss) {
+        setFraisAss(fraisAss);
+        return this;
+    }
+
+    public AssetFinRequest typeFraisAss(Double typeFraisAss) {
+        setTypeFraisAss(typeFraisAss);
+        return this;
+    }
+
+    public AssetFinRequest pavi(Double pavi) {
+        setPavi(pavi);
+        return this;
+    }
+
+    public AssetFinRequest datePremEch(String datePremEch) {
+        setDatePremEch(datePremEch);
+        return this;
+    }
+
+    public AssetFinRequest dateDerEch(String dateDerEch) {
+        setDateDerEch(dateDerEch);
+        return this;
+    }
+
+    public AssetFinRequest dateEffet(String dateEffet) {
+        setDateEffet(dateEffet);
+        return this;
+    }
+
+    public AssetFinRequest quantieme(String quantieme) {
+        setQuantieme(quantieme);
+        return this;
+    }
+
+    public AssetFinRequest uniteGrace(String uniteGrace) {
+        setUniteGrace(uniteGrace);
+        return this;
+    }
+
+    public AssetFinRequest idTitre(String idTitre) {
+        setIdTitre(idTitre);
+        return this;
+    }
+
+    public AssetFinRequest cpteBq(String cpteBq) {
+        setCpteBq(cpteBq);
+        return this;
+    }
+
+    public AssetFinRequest chargeClt(String chargeClt) {
+        setChargeClt(chargeClt);
+        return this;
+    }
+
+    public AssetFinRequest ris(String ris) {
+        setRis(ris);
+        return this;
+    }
+
+    public AssetFinRequest dosCom(String dosCom) {
+        setDosCom(dosCom);
+        return this;
+    }
+
+    public AssetFinRequest echeance(String echeance) {
+        setEcheance(echeance);
+        return this;
+    }
+
+    public AssetFinRequest vr(String vr) {
+        setVr(vr);
+        return this;
+    }
+
+    public AssetFinRequest idApporteur(String idApporteur) {
+        setIdApporteur(idApporteur);
+        return this;
+    }
+
+    public AssetFinRequest etatInst(String etatInst) {
+        setEtatInst(etatInst);
+        return this;
+    }
+
+    public AssetFinRequest etatEng(String etatEng) {
+        setEtatEng(etatEng);
+        return this;
+    }
+
+    public AssetFinRequest etatProd(String etatProd) {
+        setEtatProd(etatProd);
+        return this;
+    }
+
+    public AssetFinRequest flagCharge(String flagCharge) {
+        setFlagCharge(flagCharge);
+        return this;
+    }
+
+    public AssetFinRequest garantie(String garantie) {
+        setGarantie(garantie);
+        return this;
+    }
+
+    public AssetFinRequest nooper(String nooper) {
+        setNooper(nooper);
+        return this;
+    }
+
+    public AssetFinRequest dateTrait(String dateTrait) {
+        setDateTrait(dateTrait);
+        return this;
+    }
+
+    public AssetFinRequest versement(String versement) {
+        setVersement(versement);
+        return this;
+    }
+
+    public AssetFinRequest typeDossier(String typeDossier) {
+        setTypeDossier(typeDossier);
+        return this;
+    }
+
+    public AssetFinRequest action(String action) {
+        setAction(action);
+        return this;
+    }
+
+    public AssetFinRequest montantCommissionConcerne(Double montantCommissionConcerne) {
+        setMontantCommissionConcerne(montantCommissionConcerne);
+        return this;
+    }
+
+    public AssetFinRequest montantCommissionVendeur(Double montantCommissionVendeur) {
+        setMontantCommissionVendeur(montantCommissionVendeur);
+        return this;
+    }
+
+    public AssetFinRequest periodeAss(String periodeAss) {
+        setPeriodeAss(periodeAss);
+        return this;
     }
 
     @Override
@@ -716,7 +768,10 @@ public class AssetFinRequest {
             ", versement='" + getVersement() + "'" +
             ", typeDossier='" + getTypeDossier() + "'" +
             ", action='" + getAction() + "'" +
-            ", cptBq='" + getCpteBq() + "'" +
+            ", montantCommissionConcerne='" + getMontantCommissionConcerne() + "'" +
+            ", montantCommissionVendeur='" + getMontantCommissionVendeur() + "'" +
+            ", periodeAss='" + getPeriodeAss() + "'" +
             "}";
     }
+    
 }
