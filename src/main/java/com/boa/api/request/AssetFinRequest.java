@@ -12,7 +12,7 @@ public class AssetFinRequest {
 
 
     public AssetFinRequest() {
-    }
+    } 
 
     public AssetFinRequest(String freqAp, String numeroDossier, String idClient, String codeCss, String codeMrk, String codeMdl, String numWw, String numChassis, 
                         String numImmat, Integer grace, Integer duree, Integer typeFraisDossier, Integer typePavi, Double prixHt, Double prixTtc, Double txAp, 
