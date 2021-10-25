@@ -9,13 +9,19 @@ public class AssetFinRequest {
     private String dateTrait, versement, typeDossier, action;//47
 
     private Double montantCommissionConcerne, montantCommissionVendeur;
-    private String periodeAss;
+    private String periodeAss, assurCode, assuripfCode;
 
 
     public AssetFinRequest() {
     }
 
-    public AssetFinRequest(String freqAp, String numeroDossier, String idClient, String codeCss, String codeMrk, String codeMdl, String numWw, String numChassis, String numImmat, Integer grace, Integer duree, Integer typeFraisDossier, Integer typePavi, Double prixHt, Double prixTtc, Double txAp, Double mntAp, Double mntFin, Double tauxNominal, Double teg, Double fraisDossier, Double fraisAss, Double typeFraisAss, Double pavi, String datePremEch, String dateDerEch, String dateEffet, String quantieme, String uniteGrace, String idTitre, String cpteBq, String chargeClt, String ris, String dosCom, String echeance, String vr, String idApporteur, String etatInst, String etatEng, String etatProd, String flagCharge, String garantie, String nooper, String dateTrait, String versement, String typeDossier, String action, Double montantCommissionConcerne, Double montantCommissionVendeur, String periodeAss) {
+    public AssetFinRequest(String freqAp, String numeroDossier, String idClient, String codeCss, String codeMrk, String codeMdl, String numWw, String numChassis, 
+                        String numImmat, Integer grace, Integer duree, Integer typeFraisDossier, Integer typePavi, Double prixHt, Double prixTtc, Double txAp, 
+                        Double mntAp, Double mntFin, Double tauxNominal, Double teg, Double fraisDossier, Double fraisAss, Double typeFraisAss, Double pavi, 
+                        String datePremEch, String dateDerEch, String dateEffet, String quantieme, String uniteGrace, String idTitre, String cpteBq, String chargeClt, 
+                        String ris, String dosCom, String echeance, String vr, String idApporteur, String etatInst, String etatEng, String etatProd, String flagCharge, 
+                        String garantie, String nooper, String dateTrait, String versement, String typeDossier, String action, Double montantCommissionConcerne, 
+                        Double montantCommissionVendeur, String periodeAss, String assurCode, String assuripfCode) {
         this.freqAp = freqAp;
         this.numeroDossier = numeroDossier;
         this.idClient = idClient;
@@ -66,6 +72,25 @@ public class AssetFinRequest {
         this.montantCommissionConcerne = montantCommissionConcerne;
         this.montantCommissionVendeur = montantCommissionVendeur;
         this.periodeAss = periodeAss;
+        this.assurCode = assurCode;
+        this.assuripfCode = assuripfCode;
+    }
+
+    public String getAssurCode() {
+        return this.assurCode;
+    }
+
+    public void setAssurCode(String assurCode) {
+        this.assurCode = assurCode;
+    }
+
+
+    public String getAssuripfCode() {
+        return this.assuripfCode;
+    }
+
+    public void setAssuripfCode(String assuripfCode) {
+        this.assuripfCode = assuripfCode;
     }
 
     public String getFreqAp() {
@@ -473,6 +498,11 @@ public class AssetFinRequest {
         return this;
     }
 
+    /**************************  */
+
+    
+    /****************************** */
+
     public AssetFinRequest numeroDossier(String numeroDossier) {
         setNumeroDossier(numeroDossier);
         return this;
@@ -718,6 +748,16 @@ public class AssetFinRequest {
         return this;
     }
 
+    public AssetFinRequest assurCode(String assurCode) {
+        setAssurCode(assurCode);
+        return this;
+    }
+
+    public AssetFinRequest assuripfCode(String assuripfCode) {
+        setAssuripfCode(assuripfCode);
+        return this;
+    }
+
     @Override
     public String toString() {
         return "{" +
@@ -771,6 +811,8 @@ public class AssetFinRequest {
             ", montantCommissionConcerne='" + getMontantCommissionConcerne() + "'" +
             ", montantCommissionVendeur='" + getMontantCommissionVendeur() + "'" +
             ", periodeAss='" + getPeriodeAss() + "'" +
+            ", assurCode='" + getAssurCode() + "'" +
+            ", assuripfCode='" + getAssuripfCode() + "'" +
             "}";
     }
     

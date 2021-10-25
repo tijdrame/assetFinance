@@ -8,6 +8,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import javax.servlet.http.HttpServletRequest;
 import com.boa.api.domain.ParamEndPoint;
 import com.boa.api.domain.Tracking;
 import com.boa.api.request.AssetFinRequest;
@@ -15,7 +16,6 @@ import com.boa.api.response.GenericResponse;
 import com.boa.api.service.util.ICodeDescResponse;
 import com.boa.api.service.util.Utils;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.configurationprocessor.json.JSONObject;
@@ -84,8 +84,15 @@ public class ApiService {
 
                     .put("mnt_com_conc", assetRequest.getMontantCommissionConcerne()).put("periode_ass", assetRequest.getPeriodeAss())
                     .put("mnt_com_vend", assetRequest.getMontantCommissionVendeur())
-                    .toString();
+                    //.toString();
 
+                    .put("mnt_com_conc", assetRequest.getMontantCommissionConcerne())
+                    .put("periode_ass", assetRequest.getPeriodeAss())
+                    .put("mnt_com_vend", assetRequest.getMontantCommissionVendeur())
+                    .put("assur_code", assetRequest.getAssurCode())
+                    .put("assuripf_code", assetRequest.getAssuripfCode())
+                    .toString();
+            log.info("New Request AssetFin [{}]",jsonStr);
             log.info("request assetFin [{}]", jsonStr);
             HttpURLConnection conn = utils.doConnexion(endPoint.getEndPoints(), jsonStr, "application/json", null);
             BufferedReader br = null;
